@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pleiad Marketing — Concept Site</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&family=Inter:wght@400;500&family=Space+Mono:wght@400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        paper: '#FFFFFF',
+                        ink: '#0D447D',
+                        signal: '#FBA10E',
+                        void: '#081B2E',
+                        mist: '#5B6B7A',
+                        fog: '#AEB9C2',
+                        hairline: '#E3E8EC',
+                        'hairline-dark': '#1C3247'
+                    },
+                    fontFamily: {
+                        'jakarta': ['Plus Jakarta Sans', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                        'mono': ['Space Mono', 'monospace']
+                    },
+                    fontSize: {
+                        'hero': ['88px', { lineHeight: '0.98', letterSpacing: '-0.03em' }],
+                        'h1': ['44px', { lineHeight: '1.05' }],
+                        'h2': ['22px', { lineHeight: '1' }],
+                        'body': ['17px', { lineHeight: '1.6' }],
+                        'label': ['12px', { lineHeight: '1', letterSpacing: '0.18em' }],
+                        'nav': ['15px', { lineHeight: '1', letterSpacing: '0.1em' }]
+                    },
+                    borderRadius: {
+                        'card': '28px',
+                        'full-pill': '999px'
+                    },
+                    spacing: {
+                        'section': '140px',
+                        'section-sm': '80px'
+                    },
+                    backdropBlur: {
+                        'nav': '8px'
+                    },
+                    maxWidth: {
+                        'content': '1200px'
+                    },
+                    strokeWidth: {
+                        'line': '1.5'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="mainNav">
+        <div class="logo logo-text">PLEIAD</div>
+        <div class="menu-trigger">
+            <div style="position: relative;">
+                <span class="nav-text">Menu</span>
+                <div class="menu-underline"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <nav style="position: absolute; top: 0; left: 0; right: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 24px 40px; background: none;">
+            <div class="logo logo-text">PLEIAD</div>
+            <div class="close-btn">Close</div>
+        </nav>
+        <div class="menu-links">
+            <a href="#services" class="menu-link">Services <span class="menu-dot"></span></a>
+            <a href="#about" class="menu-link">About <span class="menu-dot"></span></a>
+            <a href="#work" class="menu-link">Work <span class="menu-dot"></span></a>
+            <a href="#contact" class="menu-link">Contact <span class="menu-dot"></span></a>
+        </div>
+        <svg class="footer-cluster" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="80" r="4" fill="#0D447D"/>
+            <circle cx="100" cy="60" r="4" fill="#0D447D"/>
+            <circle cx="150" cy="90" r="4" fill="#0D447D"/>
+            <circle cx="75" cy="130" r="4" fill="#0D447D"/>
+            <circle cx="125" cy="140" r="4" fill="#0D447D"/>
+        </svg>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <svg class="hero-cluster" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="150" r="4" fill="#FFFFFF" opacity="0.3"/>
+            <circle cx="250" cy="200" r="4" fill="#FFFFFF" opacity="0.3"/>
+            <circle cx="400" cy="100" r="4" fill="#FFFFFF" opacity="0.3"/>
+            <circle cx="150" cy="350" r="4" fill="#FFFFFF" opacity="0.3"/>
+            <circle cx="500" cy="300" r="4" fill="#FFFFFF" opacity="0.3"/>
+            <circle cx="750" cy="250" r="4" fill="#FFFFFF" opacity="0.3"/>
+            <circle cx="900" cy="400" r="4" fill="#FFFFFF" opacity="0.3"/>
+        </svg>
+
+        <div class="hero-content">
+            <div class="hero-eyebrows">
+                <div class="hero-eyebrow">
+                    <div class="hero-dash"></div>
+                    Preemptive Marketing
+                </div>
+                <div class="hero-eyebrow">
+                    <div class="hero-dash"></div>
+                    Fostering Sustainable Business Growth
+                </div>
+                <div class="hero-eyebrow">
+                    <div class="hero-dash"></div>
+                    Enriching Customer Experience
+                </div>
+            </div>
+
+            <div class="hero-title-section">
+                <div class="hero-slogan">
+                    <div class="hero-title">We don't chase attention.</div>
+                    <div class="hero-title">We align it.</div>
+                </div>
+            </div>
+
+            <button class="hero-cta" data-action="contact">
+                Start the conversation
+                <span>→</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Problem Statement Section -->
+    <section id="problem" class="scroll-in">
+        <div class="section-container">
+            <div class="eyebrow">The Problem</div>
+            <h2 class="section-title">Most brands aren't invisible. They're scattered.</h2>
+
+            <div class="problem-cluster">
+                <div class="problem-point">
+                    <div class="problem-node"></div>
+                    <div class="problem-point-content">
+                        <div class="problem-point-title">Inconsistent Messaging</div>
+                        <div class="problem-point-desc">Across platforms</div>
+                    </div>
+                </div>
+                <div class="problem-point">
+                    <div class="problem-node"></div>
+                    <div class="problem-point-content">
+                        <div class="problem-point-title">Guesswork Budgets</div>
+                        <div class="problem-point-desc">With no clear ROI</div>
+                    </div>
+                </div>
+                <div class="problem-point">
+                    <div class="problem-node"></div>
+                    <div class="problem-point-content">
+                        <div class="problem-point-title">Disconnected Channels</div>
+                        <div class="problem-point-desc">That never talk to each other</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="problem-cta-text">
+                Pleiad exists to close that gap — one strategy, every channel, pointing the same direction.
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Offer Section -->
+    <section class="what-we-offer" id="services">
+        <svg class="aligned-cluster" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="70" cy="70" r="4" fill="#0D447D"/>
+            <circle cx="100" cy="50" r="4" fill="#0D447D"/>
+            <circle cx="130" cy="70" r="4" fill="#0D447D"/>
+            <circle cx="85" cy="100" r="4" fill="#0D447D"/>
+            <circle cx="115" cy="100" r="4" fill="#0D447D"/>
+            <circle cx="100" cy="130" r="4" fill="#0D447D"/>
+            <line x1="70" y1="70" x2="100" y2="50" stroke="#0D447D" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="100" y1="50" x2="130" y2="70" stroke="#0D447D" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="130" y1="70" x2="115" y2="100" stroke="#0D447D" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="115" y1="100" x2="100" y2="130" stroke="#0D447D" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="100" y1="130" x2="85" y2="100" stroke="#0D447D" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="85" y1="100" x2="70" y2="70" stroke="#0D447D" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="100" y1="50" x2="85" y2="100" stroke="#0D447D" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+
+        <div class="section-container">
+            <div class="eyebrow">What We Offer</div>
+            <h2 class="section-title">Every channel aligned. One voice.</h2>
+
+            <div class="offers-grid">
+                <div class="offer-item scroll-in">
+                    <h3 class="offer-item-title">Brand Strategy</h3>
+                    <div class="offer-item-divider"></div>
+                    <p class="offer-item-desc">Positioning that holds up across every touchpoint</p>
+                </div>
+                <div class="offer-item scroll-in">
+                    <h3 class="offer-item-title">Content & Social</h3>
+                    <div class="offer-item-divider"></div>
+                    <p class="offer-item-desc">Consistent voice, platform by platform</p>
+                </div>
+                <div class="offer-item scroll-in">
+                    <h3 class="offer-item-title">Performance Media</h3>
+                    <div class="offer-item-divider"></div>
+                    <p class="offer-item-desc">Campaigns that connect message to results</p>
+                </div>
+                <div class="offer-item scroll-in">
+                    <h3 class="offer-item-title">Analytics & Growth</h3>
+                    <div class="offer-item-divider"></div>
+                    <p class="offer-item-desc">Measurement frameworks that drive decisions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work / Carousel Section -->
+    <section class="carousel-section" id="work">
+        <div class="section-container">
+            <div class="eyebrow">Selected Work</div>
+            <h2 class="section-title">Campaigns that moved the needle.</h2>
+
+            <div class="carousel-container">
+                <div class="carousel-track">
+                    <!-- Original items -->
+                    <div class="carousel-item">
+                        <div class="carousel-image">Project 1 Mockup</div>
+                        <div class="carousel-label">Local Retailer</div>
+                        <div class="carousel-item-name">3.2x engagement in 90 days</div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-image">Project 2 Mockup</div>
+                        <div class="carousel-label">E-commerce Brand</div>
+                        <div class="carousel-item-name">45% increase in AOV</div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-image">Project 3 Mockup</div>
+                        <div class="carousel-label">Service Business</div>
+                        <div class="carousel-item-name">2.8x qualified leads</div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="carousel-image">Project 4 Mockup</div>
+                        <div class="carousel-label">B2B SaaS</div>
+                        <div class="carousel-item-name">60% cost per lead reduction</div>
+                    </div>
+                    <!-- Duplicated for seamless loop -->
+                    <div class="carousel-item">
+                        <div class="carousel-image">Project 1 Mockup</div>
+                        <div class="carousel-label">Local Retailer</div>
+                        <div class="carousel-item-name">3.2x engagement in 90 days</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="scroll-in">
+        <div class="section-container about-section">
+            <div class="about-image">
+                <svg class="about-cluster" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="80" cy="80" r="5" fill="#0D447D"/>
+                    <circle cx="150" cy="60" r="5" fill="#0D447D"/>
+                    <circle cx="220" cy="90" r="5" fill="#0D447D"/>
+                    <circle cx="100" cy="150" r="5" fill="#0D447D"/>
+                    <circle cx="200" cy="160" r="5" fill="#0D447D"/>
+                    <circle cx="150" cy="220" r="5" fill="#0D447D"/>
+                    <line x1="80" y1="80" x2="150" y2="60" stroke="#0D447D" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="150" y1="60" x2="220" y2="90" stroke="#0D447D" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="220" y1="90" x2="200" y2="160" stroke="#0D447D" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="200" y1="160" x2="150" y2="220" stroke="#0D447D" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="150" y1="220" x2="100" y2="150" stroke="#0D447D" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="100" y1="150" x2="80" y2="80" stroke="#0D447D" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="about-content">
+                <div class="eyebrow">About Pleiad</div>
+                <h2 class="section-title">Strategy that actually sticks.</h2>
+                <p class="about-text">
+                    Most businesses treat marketing like a hammer — one tool for every nail, swung from one channel to the next. No wonder it doesn't work. The best campaigns don't chase every trend. They choose one direction and bring everything into alignment.
+                </p>
+                <p class="about-text">
+                    Pleiad exists to build that alignment. We start with strategy, move into execution, and stay with the data. Every decision is traced back to your actual business outcomes — not vanity metrics, not brand awareness points, but growth that moves.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="scroll-in">
+        <div class="section-container contact-section">
+            <div class="eyebrow">Contact</div>
+            <h2 class="section-title">Let's align your next campaign.</h2>
+
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label class="form-label" for="name">Name</label>
+                    <input type="text" id="name" class="form-input" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="email" id="email" class="form-input" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="message">Message</label>
+                    <textarea id="message" class="form-textarea" placeholder="Tell us about your project..." required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send message <span>→</span></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <svg class="footer-cluster" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="80" r="4" fill="#0D447D"/>
+            <circle cx="100" cy="60" r="4" fill="#0D447D"/>
+            <circle cx="150" cy="90" r="4" fill="#0D447D"/>
+            <circle cx="75" cy="130" r="4" fill="#0D447D"/>
+            <circle cx="125" cy="140" r="4" fill="#0D447D"/>
+            <circle cx="100" cy="180" r="4" fill="#0D447D"/>
+            <line x1="50" y1="80" x2="100" y2="60" stroke="#0D447D" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="100" y1="60" x2="150" y2="90" stroke="#0D447D" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="150" y1="90" x2="125" y2="140" stroke="#0D447D" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="125" y1="140" x2="100" y2="180" stroke="#0D447D" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="100" y1="180" x2="75" y2="130" stroke="#0D447D" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="75" y1="130" x2="50" y2="80" stroke="#0D447D" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+
+        <div class="footer-content">
+            <div class="footer-left">
+                <div class="footer-logo logo-text">PLEIAD</div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon" title="Twitter">𝕏</a>
+                    <a href="#" class="social-icon" title="LinkedIn">in</a>
+                    <a href="#" class="social-icon" title="Instagram">ig</a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links-title">Quick Links</div>
+                <div class="footer-links">
+                    <a href="#services" class="footer-link">Services</a>
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#work" class="footer-link">Work</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+        <div class="footer-meta">© PLEIAD MARKETING · LILONGWE, MALAWI</div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
