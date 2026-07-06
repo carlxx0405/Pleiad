@@ -1271,21 +1271,7 @@ body {
 	}
 }
 
-/* ── Nav overlay ──────────────────────────────────────────────────── */
-.nav-overlay {
-	position: fixed;
-	inset: 0;
-	z-index: 200;
-	background: #07111f;
-	clip-path: inset(0 0 100% 0);
-	transition: clip-path 0.72s cubic-bezier(0.77, 0, 0.18, 1);
-	pointer-events: none;
-}
 
-.nav-overlay.is-open {
-	clip-path: inset(0 0 0% 0);
-	pointer-events: all;
-}
 
 .nav-overlay-panel {
 	display: grid;
@@ -1647,8 +1633,111 @@ a.footer-detail:hover {
 	}
 
 	.footer-bar-inner {
+		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		gap: 16px;
+	}
+}
+
+/* ═══ Mobile responsiveness ═══════════════════════════════════════
+   Consolidated overrides — cascade takes care of specificity.
+══════════════════════════════════════════════════ */
+
+/* Tablets ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+	.concern-section  { padding: 72px 24px 80px; }
+	.solution-section { padding: 80px 24px 88px; }
+	.founders-section { padding: 80px 24px 88px; }
+	.brands-section   { padding: 0 24px 64px; }
+	.offer-section    { padding-bottom: 72px; }
+	.offer-header     { padding: 64px 24px 48px; }
+	.projects-header  { padding: 64px 24px 48px; }
+	.footer-contact   { padding: 80px 24px 72px; }
+}
+
+/* Large phones ───────────────────────────────────── */
+@media (max-width: 640px) {
+	/* Nav */
+	.nav-logo { height: 56px; }
+
+	/* Section paddings */
+	.concern-section  { padding: 56px 18px 64px; }
+	.solution-section { padding: 64px 18px 72px; }
+	.founders-section { padding: 64px 18px 72px; }
+	.brands-section   { padding: 0 18px 52px; }
+	.offer-header     { padding: 56px 18px 40px; }
+	.offer-section    { padding-bottom: 56px; }
+	.projects-header  { padding: 56px 18px 40px; }
+	.footer-contact   { padding: 64px 18px 56px; }
+	.footer-heading   { margin-bottom: 28px; }
+
+	/* Offer details — not reachable via hover on touch,
+	   keep them visible at all times */
+	.offer-details {
+		max-height: 300px;
+		opacity: 1;
+	}
+	.offer-item-inner {
+		grid-template-columns: 40px 1fr;
+		grid-template-rows: auto auto;
+		padding: 24px 18px;
+		gap: 12px;
+	}
+	.offer-details { grid-column: 1 / -1; }
+	.offer-item:hover .offer-item-inner {
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
+
+	/* Projects */
+	.projects-carousel-side { min-height: 72vw; }
+	.projects-scene         { min-height: 72vw; }
+}
+
+/* Standard phones ───────────────────────────────── */
+@media (max-width: 480px) {
+	/* Projects drum — scale fully with viewport */
+	.projects-drum {
+		width: 86vw;
+		height: calc(86vw * 9 / 16);
+	}
+	.projects-carousel-side { min-height: 78vw; }
+	.projects-scene         { min-height: 78vw; }
+	.projects-info-side     { padding: 40px 18px; }
+	.projects-info-desc     { max-width: 100%; }
+	.projects-info-title    { font-size: clamp(1.6rem, 6.5vw, 2.2rem); }
+
+	/* Footer bar — stack the three columns */
+	.footer-bar      { padding: 20px 18px; }
+	.footer-bar-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 16px;
+	}
+	.footer-nav     { justify-content: flex-start; }
+	.footer-socials { justify-content: flex-start; }
+
+	/* Nav overlay */
+	.nav-overlay-text  { font-size: clamp(1.9rem, 9vw, 3.2rem); }
+	.nav-overlay-left  { padding: 0 18px 40px; }
+	.nav-overlay-panel { padding-top: 88px; }
+}
+
+/* Small phones ───────────────────────────────────── */
+@media (max-width: 380px) {
+	.hero h1 {
+		font-size: clamp(2.4rem, 13vw, 3.8rem);
+	}
+	.projects-drum {
+		width: 92vw;
+		height: calc(92vw * 9 / 16);
+	}
+	.concern-text {
+		font-size: clamp(1rem, 5vw, 1.5rem);
+	}
+	.footer-heading {
+		font-size: clamp(2.2rem, 9vw, 3rem);
 	}
 }
